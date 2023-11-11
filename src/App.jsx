@@ -93,7 +93,7 @@ function App() {
   }
   
 
-  const toggleGameMode = () => setGameMode(gameMode === 'easy' ? 'hard' : 'easy'); // 新增切换游戏模式的方法
+  const toggleGameMode = () => setGameMode(gameMode === 'easy' ? 'hard' : 'easy'); 
 
   return (
     <div className="App">
