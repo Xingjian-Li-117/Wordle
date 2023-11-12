@@ -7,7 +7,13 @@ export default function Letter({ letterPos, attemptVal }) {
     const correctWordUpper = correctWord.toUpperCase();
 
     const countLetter = (word, letter, upTo) => {
-        return word.slice(0, upTo).filter(l => l === letter).length;
+        let count = 0;
+        for (let i = 0; i < upTo; i++) {
+            if (word[i] === letter) {
+                count++;
+            }
+        }
+        return count;
     };
 
     const correct = correctWordUpper[letterPos] === letter;
