@@ -17,7 +17,7 @@ export default function Letter({ letterPos, attemptVal }) {
     };
 
     const correct = correctWordUpper[letterPos] === letter;
-    // Check if the letter is in the correct word and its count in the attempt is not more than in the correct word
+
     const misplaced = !correct && letter !== "" && correctWordUpper.includes(letter) && 
         countLetter(board[attemptVal], letter, letterPos) < countLetter(correctWordUpper.split(''), letter, correctWordUpper.length);
 
