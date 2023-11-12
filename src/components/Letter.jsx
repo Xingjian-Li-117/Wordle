@@ -6,7 +6,6 @@ export default function Letter({ letterPos, attemptVal }) {
     const letter = board[attemptVal][letterPos];
     const correctWordUpper = correctWord.toUpperCase();
 
-    // Function to count the number of times a letter appears up to a certain position
     const countLetter = (word, letter, upTo) => {
         return word.slice(0, upTo).filter(l => l === letter).length;
     };
