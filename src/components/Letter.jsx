@@ -4,7 +4,7 @@ import { AppContext } from '../App';
 export default function Letter({ letterPos, attemptVal }) {
     const { board, correctWord, curAttempt } = useContext(AppContext);
     const letter = board[attemptVal][letterPos];
-    const correctWordUpper = correctWord.toUpperCase();
+    
 
     const countLetter = (word, letter, upTo) => {
         let count = 0;
@@ -16,6 +16,7 @@ export default function Letter({ letterPos, attemptVal }) {
         return count;
     };
 
+    const correctWordUpper = correctWord.toUpperCase();
     const correct = correctWordUpper[letterPos] === letter;
 
     const misplaced = !correct && letter !== "" && correctWordUpper.includes(letter) && 
